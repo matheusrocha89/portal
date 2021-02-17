@@ -5,13 +5,25 @@ import classnames from 'classnames';
 
 import styles from './Headline.module.scss';
 
-const Headline = ({ className, size, children, testId, ...props }) => {
+const Headline = ({
+  className,
+  size,
+  children,
+  testId,
+  noMargin,
+  ...props
+}) => {
   switch (size) {
     case 'large': {
       return (
         <h1
           data-testid={testId}
-          className={classnames(styles.headline, styles.large, className)}
+          className={classnames(
+            styles.headline,
+            styles.large,
+            noMargin && styles.noMargin,
+            className
+          )}
           {...props}
         >
           {children}
@@ -23,7 +35,12 @@ const Headline = ({ className, size, children, testId, ...props }) => {
       return (
         <h3
           data-testid={testId}
-          className={classnames(styles.headline, styles.small, className)}
+          className={classnames(
+            styles.headline,
+            styles.small,
+            noMargin && styles.noMargin,
+            className
+          )}
           {...props}
         >
           {children}
@@ -35,7 +52,12 @@ const Headline = ({ className, size, children, testId, ...props }) => {
       return (
         <h2
           data-testid={testId}
-          className={classnames(styles.headline, styles.medium, className)}
+          className={classnames(
+            styles.headline,
+            styles.medium,
+            noMargin && styles.noMargin,
+            className
+          )}
           {...props}
         >
           {children}
@@ -54,12 +76,14 @@ Headline.propTypes = {
     PropTypes.array,
     PropTypes.object,
   ]),
+  noMargin: PropTypes.bool,
 };
 
 Headline.defaultProps = {
   className: '',
   size: 'medium',
   children: '',
+  noMargin: false,
 };
 
 export default Headline;

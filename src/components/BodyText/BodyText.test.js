@@ -21,6 +21,16 @@ describe('<BodyText />', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('renders correctly without margin', () => {
+    const { asFragment } = render(
+      <BodyText noMargin {...sharedProps}>
+        Testing
+      </BodyText>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('renders correctly default size and bold', () => {
     const { asFragment } = render(
       <BodyText {...sharedProps} bold>

@@ -21,6 +21,16 @@ describe('<Headline />', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('renders correctly with no margin', () => {
+    const { asFragment } = render(
+      <Headline {...sharedProps} noMargin>
+        Testing
+      </Headline>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('renders correctly large size', () => {
     const { asFragment } = render(
       <Headline {...sharedProps} size="large">

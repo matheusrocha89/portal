@@ -5,7 +5,15 @@ import classnames from 'classnames';
 
 import styles from './BodyText.module.scss';
 
-const BodyText = ({ className, children, size, bold, testId, ...props }) => (
+const BodyText = ({
+  className,
+  children,
+  size,
+  bold,
+  testId,
+  noMargin,
+  ...props
+}) => (
   <p
     data-testid={testId}
     className={classnames(
@@ -13,6 +21,7 @@ const BodyText = ({ className, children, size, bold, testId, ...props }) => (
       { [styles.medium]: size === 'medium' },
       { [styles.small]: size === 'small' },
       { [styles.bold]: bold },
+      noMargin && styles.noMargin,
       className
     )}
     {...props}
@@ -32,6 +41,7 @@ BodyText.propTypes = {
     PropTypes.object,
   ]),
   testId: PropTypes.string,
+  noMargin: PropTypes.bool,
 };
 
 BodyText.defaultProps = {
@@ -40,6 +50,7 @@ BodyText.defaultProps = {
   bold: false,
   children: '',
   testId: '',
+  noMargin: false,
 };
 
 export default BodyText;

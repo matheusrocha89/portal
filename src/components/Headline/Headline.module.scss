@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .headline {
   color: $color-black;
@@ -19,4 +19,8 @@
 .small {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.noMargin {
+  margin: 0;
 }

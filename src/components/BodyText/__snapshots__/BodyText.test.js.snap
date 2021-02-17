@@ -55,3 +55,14 @@ exports[`<BodyText /> renders correctly with html alternative attributes 1`] = `
   </p>
 </DocumentFragment>
 `;
+
+exports[`<BodyText /> renders correctly without margin 1`] = `
+<DocumentFragment>
+  <p
+    class="bodyText medium noMargin"
+    data-testid="paragraph"
+  >
+    Testing
+  </p>
+</DocumentFragment>
+`;
