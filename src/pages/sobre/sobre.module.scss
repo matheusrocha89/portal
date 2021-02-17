@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.pageTitle {
+  margin: $space4x 0;
+}
+
+.textTitle {
+  color: $color-primary--dark;
+  font-weight: bold;
+  margin: 0 0 $space2x;
+}
