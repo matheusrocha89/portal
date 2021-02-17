@@ -13,9 +13,10 @@ export default function About() {
       <Container>
         <Row>
           <Col xs={12}>
-            <Headline className={styles.pageTitle}>
-              Sobre: Nosso manifesto
-            </Headline>
+            <div className={styles.pageTitleWrapper}>
+              <Headline noMargin>Sobre:</Headline>
+              <Headline noMargin>Nosso manifesto</Headline>
+            </div>
 
             <BodyText noMargin className={styles.textTitle}>
               O que é o Dados Abertos de Feira?
