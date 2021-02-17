@@ -12,7 +12,22 @@ $color-gray-2: #a8b9c8;
 $color-gray-3: #dde8ee;
 $color-gray-4: #f8f9fa;
 $color-white: #ffffff;
+$page-bg-color: #f8fbff;
 
 // EFFECTS
 $shadow-1: 0px 4px 30px rgba(0, 0, 0, 0.2);
 $shadow-2: 0px -4px 30px rgba(0, 0, 0, 0.2);
+
+// SIZES
+$space1x: 4px;
+$space2x: 2*$space1x;
+$space3x: 3*$space1x;
+$space4x: 4*$space1x;
+$space5x: 5*$space1x;
+$space6x: 6*$space1x;
+$space7x: 7*$space1x;
+$space8x: 8*$space1x;
+$space9x: 9*$space1x;
+$space10x: 10*$space1x;
+$space11x: 11*$space1x;
+$space12x: 12*$space1x;
